@@ -81,6 +81,8 @@ const goToPlatform = () => {
     text-align: center;
     color: white;
   }
+
+
   &__button-container {
     width: 222px;
     /* text-align: center; */
