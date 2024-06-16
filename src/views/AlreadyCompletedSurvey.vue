@@ -86,7 +86,7 @@ const goToPlatform = () => {
     /* text-align: center; */
   }
   &__button {
-    /* max-width: 222px; */
+    /* max-width: 222px;*/
     width: 100%;
     height: 44px;
     border-radius: 22px;
