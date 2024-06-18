@@ -36,7 +36,7 @@
     <div class="additional-survey-content__img-container">
       <img
         src="../AppImage.png"
-        alt="Rutube Logo"
+        alt="App Image"
         class="additional-survey-content__img"
       />
     </div>
@@ -146,19 +146,12 @@ const loadSelectedOptions = () => {
     console.log("mainSurveyCompleted we need");
     router.push("/");
   }
+
   if (additionalSurveyCompleted === "true" && mainSurveyCompleted === "true") {
     console.log("все пройдено");
     router.push("/already-completed");
   }
 
-  // если главный опрос не пройден, то пушим в mainSurvey
-  // потому что необходимо заставить человека пройти
-  // !Но бывает такое, что при в main-survey выборе циклит и страница зависает, не переходя в additional-survey
-  // if (mainSurveyCompleted === "null");
-  // {
-  //   router.push("/");
-  //   console.log("mainSurveyCompleted is null, so push to mainSurvey");
-  // }
   // если расширенный опрос пройден, то отправляем его в already
   if (additionalSurveyCompleted === "true") {
     console.log("additionalSurveyCompleted is", additionalSurveyCompleted);
@@ -227,30 +220,33 @@ onMounted(() => {
   align-items: flex-start;
   padding: 16px 0px 24px 0px;
   position: relative;
-  //
+
   &__header {
     font-family: Roboto;
     font-size: 17px;
     font-weight: 400;
     line-height: 22px;
-    text-align: center;
+    // text-align: center;
   }
+
   &__question {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 8px;
+
     &--first .additional-survey-content-options {
       display: flex;
       flex-direction: column;
     }
+
     &--first .additional-survey-content-option {
       box-sizing: border-box;
       width: 200px;
       padding: 0px 16px 0px 16px;
       justify-content: flex-start;
+
       &-text {
-        //styleName: h3;
         font-family: Roboto;
         font-size: 12px;
         font-weight: 400;
@@ -258,10 +254,7 @@ onMounted(() => {
         text-align: center;
       }
     }
-    //  > .additional-survey-content.options {
-    //   display: flex;
-    //   flex-direction: column;
-    // }
+
     &-text {
       // gap: 2px;
       font-style: Roboto;
@@ -332,13 +325,45 @@ onMounted(() => {
     right: 0;
     transform: translateY(-50%);
     // height: 100%;
-    width: 55%;
+    max-width: 580px;
+    // width: 55.2%;
   }
   &__img {
-    max-width: 581px;
     width: 100%;
     // height: 540px;
     height: auto;
+  }
+}
+
+@media screen and (min-width: 376px) and (max-width: 1024px) {
+  .additional-survey-content {
+    box-sizing: border-box;
+    width: 100%;
+    height: 808px;
+    padding: 16px 16px 24px 16px;
+    gap: 28px;
+    &__img-container {
+      width: 52%;
+      max-width: 548px;
+    }
+    &__img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+@media screen and (max-width: 648px) {
+  .additional-survey-content__img-container {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .additional-survey-content {
+    align-items: center;
+  }
+  .additional-survey-content__submit-container {
+    width: 342px;
   }
 }
 </style>

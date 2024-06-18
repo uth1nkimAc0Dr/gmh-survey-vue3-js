@@ -82,7 +82,6 @@ const goToPlatform = () => {
     color: white;
   }
 
-
   &__button-container {
     width: 222px;
     /* text-align: center; */
@@ -102,6 +101,55 @@ const goToPlatform = () => {
     text-align: center;
     color: white;
     cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 376px) and (max-width: 1024px) {
+  .completed-survey {
+    &__content {
+      width: 100%;
+      max-width: 1024px;
+    }
+
+    &__image {
+      img {
+        width: 52%;
+      }
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 552px;
+      padding: 10px;
+      gap: 28px;
+    }
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .completed-survey {
+    &__content {
+      width: 100%;
+      max-width: 376px;
+    }
+
+    &__image {
+      width: 100%;
+      padding: 12px 0px 12px 0px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__form {
+      /* width: 100%; */
+      /* height: Hug (171px) px; */
+      padding: 10px 16px 10px 16px;
+      gap: 14px;
+    }
   }
 }
 </style>

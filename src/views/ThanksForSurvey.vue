@@ -21,8 +21,6 @@
 <script setup>
 import Header from "../components/Header.vue";
 
-// const router = useRouter();
-
 const goToPlatform = () => {
   window.location.href = "https://rutube.ru";
 };
@@ -84,7 +82,7 @@ const goToPlatform = () => {
     }
 
     &__button {
-      // max-width: 222px;
+
       width: 100%;
       height: 44px;
       border-radius: 22px;
@@ -99,7 +97,51 @@ const goToPlatform = () => {
       cursor: pointer;
     }
   }
+}
 
+// tablet
+@media screen and (min-width: 376px) and (max-width: 1024px) {
+  .thanks-survey {
+    &__content {
 
+      width: 100%;
+      max-width: 1024px;
+    }
+
+    &__image {
+      width: 100%;
+      max-width: 1024px;
+
+      img {
+        width: 52%;
+        max-width: 524px;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .thanks-survey {
+    &__content {
+      // width: 376px;
+      width: 100%;
+      height: 336px;
+    }
+
+    &__image {
+      width: 100%;
+      max-width: 376px;
+      img {
+        width: 100%;
+      }
+    }
+    &__form {
+      width: 100%;
+
+      padding: 10px 16px 10px 16px;
+      gap: 14px;
+    }
+  }
 }
 </style>
