@@ -2,7 +2,7 @@
   <Header />
   <div class="thanks-survey__content">
     <div class="thanks-survey__image">
-      <img src="../ThanksImage.png" alt="Thank you image" />
+      <img src="@/assets/images/ThanksImage.png" alt="Thank you image" />
     </div>
     <div class="thanks-survey__form">
       <div class="thanks-survey__form--header">Спасибо за обратную связь</div>
@@ -82,7 +82,6 @@ const goToPlatform = () => {
     }
 
     &__button {
-
       width: 100%;
       height: 44px;
       border-radius: 22px;
@@ -103,7 +102,6 @@ const goToPlatform = () => {
 @media screen and (min-width: 376px) and (max-width: 1024px) {
   .thanks-survey {
     &__content {
-
       width: 100%;
       max-width: 1024px;
     }

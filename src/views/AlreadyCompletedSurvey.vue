@@ -2,7 +2,10 @@
   <Header />
   <div class="completed-survey__content">
     <div class="completed-survey__image">
-      <img src="../SurveyIsCompletedImage.png" alt="Completed survey image" />
+      <img
+        src="@/assets/images/SurveyIsCompletedImage.png"
+        alt="Completed survey image"
+      />
     </div>
 
     <div class="completed-survey__form">

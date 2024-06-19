@@ -14,7 +14,6 @@
       }"
     >
       <div class="additional-survey-content__question-text">
-        <!-- {{ index + 1 }}.  -->
         {{ question.text }}
       </div>
 
@@ -35,7 +34,7 @@
 
     <div class="additional-survey-content__img-container">
       <img
-        src="../AppImage.png"
+        src="@/assets/images/AppImage.png"
         alt="App Image"
         class="additional-survey-content__img"
       />
@@ -199,7 +198,7 @@ const submitSurvey = () => {
     }
 
     console.log("Survey Responses:", surveyResponses);
-    console.log("additionalSurveyCompleted затрушили");
+    // console.log("additionalSurveyCompleted затрушили");
   }
 };
 

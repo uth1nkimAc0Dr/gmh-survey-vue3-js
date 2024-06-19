@@ -1,8 +1,9 @@
 <template>
   <header class="header">
-    <div class="header__image-container">
-      <img src="../Rutube.png" alt="Rutube Logo" class="header__image" />
+    <div class="header__logo-container">
+      <img src="@/assets/images/Rutube.png" alt="Rutube Logo" class="header__logo" />
     </div>
+
     <div class="header__divider">
       <div class="header__line"></div>
     </div>
@@ -18,21 +19,17 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  // gap:10px;
-  // не видел смысла в данном случае использовать gap
 
-  &__image-container {
+  &__logo-container {
     width: 100%;
-    padding: 28px 0px 28px 0px;
+    padding: 28px 0;
     height: 96px;
     box-sizing: border-box;
-    gap: 10px;
   }
 
-  &__image {
+  &__logo {
     width: 148px;
     height: auto;
-    // height: 40px;
   }
 
   &__divider {
@@ -40,10 +37,9 @@
     height: 20px;
     box-sizing: border-box;
     display: flex;
-    padding: 9px 0px 9px 0px;
-    gap: 10px;
-    // align-items: center;
+    padding: 9px 0px;
   }
+
   &__line {
     width: 100%;
     height: 2px;
@@ -62,16 +58,11 @@
   .header {
     width: 100%;
     max-width: 1024px;
-    // height: 80px;
-    // padding: 20px;
-    // box-sizing: border-box;
 
-    &__image-container {
+    &__logo-container {
       max-width: 1024px;
       height: 80px;
-      box-sizing: border-box;
       padding: 20px 0px 20px 20px;
-      gap: 10px;
     }
   }
 }
@@ -81,32 +72,15 @@
     width: 100%;
     max-width: 376px;
 
-    &__image-container {
-      // width: 100%;
+    &__logo-container {
       height: 80px;
-      height: 80px;
-      // box-sizing: border-box;
-      padding: 20px 0px 20px 20px;
-      // gap: 10px;
+      padding: 20px 0 20px 20px;
     }
 
-    &__image {
+    &__logo {
       width: 148px;
       height: auto;
-      // height: 40px;
     }
-
-    // &__divider {
-    // width: 100%;
-    // height: 20px;
-    // box-sizing: border-box;
-    // display: flex;
-    // padding: 9px 0px 9px 0px;
-    // gap: 10px;
-    // align-items: center;
-    // }
   }
 }
 </style>
-
-<!-- header gap:10px -->
