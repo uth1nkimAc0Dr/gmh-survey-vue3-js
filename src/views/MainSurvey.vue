@@ -53,23 +53,16 @@ const selectedRating = ref(null);
 //   .map((_, i) => i);
 const ratings = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
+const redirectTo = (path) => {
+  router.push(path);
+};
+
 const checkIfSurveyCompleted = () => {
   const mainSurveyCompleted = localStorage.getItem("mainSurveyCompleted");
-  const additionalSurveyCompleted = localStorage.getItem(
-    "additionalSurveyCompleted"
-  );
-  if (mainSurveyCompleted === "true" && additionalSurveyCompleted === "true") {
-    console.log("Это значит, что все окей, и пушим в already");
-    router.push("/already-completed");
-  }
-  // можно вытащить его как true, если selectedRating имеется в localStorage
-  //нужно добавить проверку selectedOptions: если там хоть что-то есть, то перекидывать
+
+  //   "Это значит, что главный опрос уже был пройден, и пушим в additionalSurvey"
   if (mainSurveyCompleted === "true") {
-    // console.log("mainSurveyCompleted is", mainSurveyCompleted);
-    // console.log(
-    //   "Это значит, что главный опрос пройден, и пушим в additionalSurvey"
-    // );
-    router.push("/additional-survey");
+    redirectTo("/additional-survey");
   }
 };
 
@@ -82,20 +75,7 @@ const selectRating = (rating) => {
   localStorage.setItem("selectedRating", rating);
   localStorage.setItem("mainSurveyCompleted", "true");
 
-  const additionalSurveyCompleted = localStorage.getItem(
-    "additionalSurveyCompleted"
-  );
-
-  const mainSurveyCompleted = localStorage.getItem("mainSurveyCompleted");
-  if (
-    (additionalSurveyCompleted === "true") &
-    (mainSurveyCompleted === "true")
-  ) {
-    router.push("/thanks");
-  }
   router.push("/additional-survey");
-  // console.log("selectedRating ", JSON.stringify(selectedRating.value));
-  // console.log("rating", JSON.stringify(rating));
 };
 </script>
 
